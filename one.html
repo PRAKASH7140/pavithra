@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Medicine</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Add Medicine</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/addMedicine" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" id="price" name="price" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiredDate">Expired Date:</label>
+                        <input type="date" class="form-control" id="expiredDate" name="expiredDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stockAvailable">Stock Available:</label>
+                        <input type="number" class="form-control" id="stockAvailable" name="stockAvailable" min="0" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Medicine</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

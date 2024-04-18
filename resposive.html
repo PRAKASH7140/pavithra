@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <style>
+    /* CSS for responsiveness */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Define a container */
+    .container {
+      max-width: 1200px;
+      /* Adjust as needed */
+      margin: 0 auto;
+      padding: 0 20px;
+      /* Add padding for better readability */
+    }
+
+    /* Example of responsive layout */
+    .column {
+      float: left;
+      width: 100%;
+      padding: 10px;
+    }
+
+    @media only screen and (min-width: 768px) {
+
+      /* Adjust layout for tablets and desktops */
+      .column {
+        width: 50%;
+      }
+    }
+
+    @media only screen and (min-width: 1200px) {
+
+      /* Adjust layout for larger screens */
+      .column {
+        width: 33.33%;
+      }
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Example of responsive navigation */
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Content -->
+  <div class="container">
+    <div class="row">
+      <div class="column">
+        <h2>Column 1</h2>
+        <p>Content for column 1...</p>
+      </div>
+      <div class="column">
+        <h2>Column 2</h2>
+        <p>Content for column 2...</p>
+      </div>
+      <div class="column">
+        <h2>Column 3</h2>
+        <p>Content for column 3...</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
